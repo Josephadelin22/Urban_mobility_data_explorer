@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>NYC Taxi Dashboard</title>
+    <link rel="stylesheet" href="./public/css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    
+    <header>
+        <h1> NYC Taxi Trips Dashboard</h1>
+    </header>
+
+    <!-- Filters -->
+    <section id="filters">
+        
+        <label>Trip Category:
+            <select id="categoryFilter">
+                <option value="all">All</option>
+                <option value="short">Short</option>
+                <option value="medium">Medium</option>
+                <option value="long">Long</option>
+            </select>
+        </label>
+    </section>
+
+    <!-- Trip Table -->
+    <section id="table-section">
+        
+        <table id="tripsTable">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Distance (km)</th>
+                    <th>Speed (km/h)</th>
+                    <th>Category</th>
+                    <th>Duration (s)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>id2875421</td>
+                    <td>3.45</td>
+                    <td>27.2</td>
+                    <td>short</td>
+                    <td>420</td>
+                </tr>
+                <tr>
+                    <td>id2377394</td>
+                    <td>8.62</td>
+                    <td>38.4</td>
+                    <td>medium</td>
+                    <td>720</td>
+                </tr>
+                <tr>
+                    <td>id3858529</td>
+                    <td>15.12</td>
+                    <td>41.5</td>
+                    <td>long</td>
+                    <td>1330</td>
+                </tr>
+                <tr>
+                    <td>id2181028</td>
+                    <td>2.78</td>
+                    <td>25.8</td>
+                    <td>short</td>
+                    <td>390</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Chart -->
+    <section id="chart-section">
+        <canvas id="speedChart"></canvas>
+    </section>
+
+    <!-- JavaScript -->
+    <script src="./public/interaction/dashboard.js"></script>
+</body>
+</html>
